@@ -76,6 +76,13 @@
     
     [self.tableView reloadData];
     [self.tableView openSection:0 animated:NO];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openSection:) name:sectionPressedNotification object:nil];
+}
+
+- (void)openSection:(NSNotification *)sender {
+    
+    NSLog(@"Section Pressed = %@", sender.object);
 }
 
 - (IBAction)handleExclusiveButtonTap:(UIButton*)button

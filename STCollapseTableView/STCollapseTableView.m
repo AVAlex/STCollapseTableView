@@ -207,6 +207,9 @@
 		return;
 	}
 	
+    // Post a notification when section is pressed
+    [[NSNotificationCenter defaultCenter] postNotificationName:sectionPressedNotification object:[NSNumber numberWithUnsignedInteger:sectionIndex]];
+    
 	BOOL sectionIsOpen = [[self.sectionsStates objectAtIndex:sectionIndex] boolValue];
 	
 	if (sectionIsOpen)

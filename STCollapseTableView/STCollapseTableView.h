@@ -31,12 +31,23 @@
 #import <UIKit/UIKit.h>
 
 /**
+ *	This string is useful when VC listen notification when a section is pressed.
+ *
+ *	@param	sectionIndex	The section pressed.
+ *
+ */
+
+static NSString *sectionPressedNotification = @"KsectionPressed";
+
+
+/**
  *	STCollapseTableView is a UITableView subclass that automatically collapse and/or expand your sections.
  *
  *  Just fill your datasource like for any table view and the magic will happen.
  *  By default all the sections are closed.
  */
 @interface STCollapseTableView : UITableView
+
 
 /**
  *	This property allow to enable/disable the exclusivity.
